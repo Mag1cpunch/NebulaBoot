@@ -1,4 +1,5 @@
 local function boot()
+    term.clear()
     print("Checking FS...")
     if not fs.exists("/Nebula") then
         fs.makeDir("/Nebula")
