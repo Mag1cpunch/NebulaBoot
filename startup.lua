@@ -12,9 +12,8 @@ local function boot()
     end
     print("[ OK ] Checked FS.")
     shell.run("/Nebula/boot.lua")
-    term.clear()
     print("[ Fail ] Could not continue kernel execution, Rebooting in 5 seconds...")
     os.sleep(5)
-    os.shutdown()
+    os.reboot()
 end
 boot()
