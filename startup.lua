@@ -6,6 +6,10 @@ local function boot()
     if not fs.exists("/Nebula/Kernels") then
         fs.makeDir("/Nebula/Kernels")
     end
+    if not fs.exists("/Nebula/boot.lua") then
+        shell.run("cd /Nebula")
+        shell.run("wget https://raw.githubusercontent.com/Mag1cpunch/NebulaBoot/main/Nebula/boot.lua")
+    end
     print("[ OK ] Checked FS.")
     shell.run("/Nebula/boot.lua")
     term.clear()
